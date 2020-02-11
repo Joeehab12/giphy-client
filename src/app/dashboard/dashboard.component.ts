@@ -35,7 +35,7 @@ export class DashboardComponent implements OnInit {
     
     this.gifService.getSearchGIF(this.query).subscribe((response:any)=>{
       this.queriedGIF_URL = response.data.images.original.url;
-      console.log(this.queriedGIF_URL);
+      // console.log(this.queriedGIF_URL);
     });
   }
 
