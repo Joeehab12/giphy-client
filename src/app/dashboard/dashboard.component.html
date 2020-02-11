@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>GIF Generator</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        
+    </head>
+    <body>
+        <!-- <input type="text" placeholder="Search for GIFs"> -->
+        <div class = "content row">
+            <div class = "col-md-4">
+                <div class = "text-center">
+                    <p>Click to Generate a Random GIF</p>
+                    <button type="button" (click) = "generateRandomGIF()" class="btn btn-outline-primary">Generate</button>
+                </div>
+                <div class = "text-center">
+                    <br>
+                    <img [(src)]="GIF_URL">
+                </div>
+            </div>
+            <div class = "col-md-4">
+                <div class = "text-center">
+                    <p>Click to Generate a Random Sticker</p>
+                    <button type="button" (click) = "generateRandomSticker()" class="btn btn-outline-primary">Generate</button>
+                </div>
+                <div class = "text-center">
+                    <br>
+                    <img [(src)]="sticker_URL">
+                </div>
+            </div>
+            <div class = "col-md-4 text-center">
+                <div class = "text-center">
+                    <p>Search for your most suitable GIF</p>
+                    <input type="text" name = "query" [(ngModel)]="query">
+                    <div>
+                        <br>
+                        <button type="button" (click) = "getGIF()" class="btn btn-outline-primary">Search</button>
+                    </div>
+                </div>
+                <div class = "text-center">
+                    <br>
+                    <img [(src)]="queriedGIF_URL">
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
