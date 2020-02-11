@@ -26,7 +26,7 @@ export class DashboardComponent implements OnInit {
     this.sticker_URL = "";
     this.gifService.getStickerData().subscribe((response:any)=>{
       this.sticker_URL = response.data.images.original.url;
-      console.log(this.sticker_URL);
+      // console.log(this.sticker_URL);
     });
   }
   getGIF(){
